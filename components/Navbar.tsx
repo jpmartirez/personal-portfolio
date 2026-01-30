@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className="navbar max-w-7xl mx-auto w-full">
+    <div className="navbar max-w-7xl mx-auto w-full pt-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -10,37 +11,23 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={-1}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-            <li><a>Item 3</a></li>
+            className="menu menu-sm dropdown-content flex flex-col gap-4 bg-gray-700/30 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <Link href="/"><li className="font-semibold ">Home</li></Link>
+            <Link href="/about"><li className="font-semibold">About</li></Link>
+            <Link href="/works"><li className="font-semibold">Work</li></Link>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">J.Paul</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><a>Item 1</a></li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a>Item 3</a></li>
+        <ul className="menu menu-horizontal px-5 py-3 bg-gray-700/30 flex gap-8 rounded-full">
+          <Link href="/"><li className="font-semibold text-gray-400">Home</li></Link>
+          <Link href="/about"><li className="font-semibold text-gray-400">About</li></Link>
+          <Link href="/works"><li className="font-semibold text-gray-400">Work</li></Link>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-white text-black rounded-full font-semibold">Let's Talk</a>
+        <Link href={'/contact'} className="btn bg-white text-black rounded-full font-semibold" >Let's Talk</Link>
       </div>
     </div>
   )
