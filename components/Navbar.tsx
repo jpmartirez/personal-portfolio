@@ -3,7 +3,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className="navbar max-w-7xl mx-auto w-full pt-5">
+    <div className="navbar max-w-7xl mx-auto w-full pt-5 font-montserrat">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -17,7 +17,7 @@ const Navbar = () => {
             <Link href="/works"><li className="font-semibold">Work</li></Link>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">J.Paul</a>
+        <a className="btn btn-ghost text-2xl font-bold">J.Paul</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-5 py-3 bg-gray-700/30 flex gap-8 rounded-full">
